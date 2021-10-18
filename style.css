@@ -32,3 +32,23 @@
 	width: 350px;
 	max-width: 450px;
 }
+
+.aspect {
+	width: 50%;
+	height: auto;
+	color: #fff;
+	margin: 20px 0;
+	text-align: center;
+
+	line-height: 60px;
+	font-size: 25px;
+}
+
+.video {
+	background-color: rgb(83, 212, 163);
+	aspect-ratio: 16 / 9;
+}
+.one-by-one {
+	background-color: red;
+	aspect-ratio: 1 / 1;
+}
