@@ -129,8 +129,22 @@ p {
 } */
 /* Double box-shadow */
 
-div {
+/* div {
 	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 40px 40px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* Text Gradient */
+h1 {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 9, 121, 1) 0%,
+		rgba(144, 6, 168, 1) 49%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+	font-size: 5rem;
+}
