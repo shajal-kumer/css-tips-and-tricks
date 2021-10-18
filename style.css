@@ -49,3 +49,14 @@ div {
 	padding: 5rem;
 	margin: 5rem;
 } */
+
+/* Margin auto to center */
+div {
+	width: 500px;
+	height: 100vh;
+	line-height: 100vh; /* vertically center text*/
+	text-align: center;
+	background: lightblue;
+	/* margin: 0 0 0 auto;  */
+	margin: 0 auto;
+}
