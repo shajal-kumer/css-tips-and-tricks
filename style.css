@@ -70,7 +70,8 @@ p::first-letter {
 	font-weight: bold;
 } */
 
-.scroll-container {
+/* Smooth scroll */
+/* .scroll-container {
 	width: 100%;
 	height: 100vh;
 	overflow-y: scroll;
@@ -94,4 +95,16 @@ p::first-letter {
 
 .scroll-page-3 {
 	background: #b8b7cd;
+} */
+
+/* Invert the colors on the screen */
+a {
+	font-size: 5rem;
+	color: rgb(223, 21, 98);
+}
+
+html {
+	background: #000;
+	color: #fff;
+	filter: invert(1) hue-rotate(180deg);
 }
