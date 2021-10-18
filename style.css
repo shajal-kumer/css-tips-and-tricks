@@ -105,3 +105,20 @@ ol ul li {
 :is(ul, ol) :is(ul, ol) li {
     color: green
 }
+
+.counter {
+    counter-reset: heading;
+}
+.counter h2:before {
+    content: "Part " counter(heading, upper-roman) ": ";
+    counter-increment: heading;
+}
+
+.counter ol {
+    counter-reset: outline;
+}
+
+.counter li::before {
+    content: counters(outline, ".") ". ";
+    counter-increment: outline;
+}
