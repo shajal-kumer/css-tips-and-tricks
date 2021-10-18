@@ -98,7 +98,7 @@ p::first-letter {
 } */
 
 /* Invert the colors on the screen */
-a {
+/* a {
 	font-size: 5rem;
 	color: rgb(223, 21, 98);
 }
@@ -107,4 +107,26 @@ html {
 	background: #000;
 	color: #fff;
 	filter: invert(1) hue-rotate(180deg);
+} */
+
+/* Adapt text on risize */
+/* 1rem  = 16px */
+
+html {
+	font-size: 62.5%; /* 10px*/
 }
+h1 {
+	font-size: 2rem;
+}
+p {
+	font-size: 1.8rem;
+}
+
+@media (max-width: 700px) {
+	html {
+		font-size: 55%;
+	}
+}
+/* Doble box-shadow */
+
+/* Text Gradient */
