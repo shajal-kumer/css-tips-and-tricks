@@ -122,3 +122,26 @@ ol ul li {
     content: counters(outline, ".") ". ";
     counter-increment: outline;
 }
+
+.conic-gradient {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(red, green);
+    background: conic-gradient(
+        red .25turn,
+        blue .25turn .65turn,
+        green .65turn
+    );
+    background: conic-gradient(
+        hsl(360, 100%, 50%),
+        hsl(315, 100%, 50%),
+        hsl(270, 100%, 50%),
+        hsl(225, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(135, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(45, 100%, 50%),
+        hsl(0, 100%, 50%)
+    );
+}
