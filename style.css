@@ -169,3 +169,13 @@ ol ul li {
         background-color: green;
     }
 }
+
+.writing-mode div {
+    background-color: rgb(16, 139, 155);
+    height: 100px;
+    width: 100px;
+    color: white;
+    writing-mode: vertical-rl;
+    /* padding-top: 20px; */
+    padding-block-start: 20px;
+}
