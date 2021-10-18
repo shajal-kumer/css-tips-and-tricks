@@ -51,12 +51,21 @@ div {
 } */
 
 /* Margin auto to center */
-div {
+/* div {
 	width: 500px;
 	height: 100vh;
-	line-height: 100vh; /* vertically center text*/
+	line-height: 100vh; 
 	text-align: center;
 	background: lightblue;
-	/* margin: 0 0 0 auto;  */
 	margin: 0 auto;
+} */
+
+/*  p::selection and p::first-letter  */
+p::selection {
+	background: purple;
+	color: #fff;
+}
+p::first-letter {
+	font-size: 2rem;
+	font-weight: bold;
 }
