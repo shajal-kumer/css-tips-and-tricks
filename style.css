@@ -62,3 +62,18 @@
 	width: calc(var(--percentage) * 1rem);
 	width: calc(var(--percentage) * 1em);
 }
+:root {
+	--header-height: 60px;
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--header-height) + 20px);
+}
+header {
+	background-color: rgb(158, 25, 25);
+	color: #fff;
+	height: var(--header-height);
+	text-align: center;
+	font-size: 25px;
+	line-height: var(--header-height);
+	position: sticky;
+	top: 0;
+}
