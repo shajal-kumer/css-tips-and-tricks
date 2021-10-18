@@ -52,3 +52,13 @@
 	background-color: red;
 	aspect-ratio: 1 / 1;
 }
+.percentage {
+	height: 60px;
+	background-color: rgb(47, 201, 167);
+
+	--percentage: 20;
+	width: calc(var(--percentage) * 1%);
+	width: calc(var(--percentage) * 1px);
+	width: calc(var(--percentage) * 1rem);
+	width: calc(var(--percentage) * 1em);
+}
