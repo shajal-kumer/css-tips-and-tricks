@@ -5,13 +5,115 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CSS Tips & Tricks</title>
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<button class="btn"></button>
-		<button class="btn big"></button>
-		<button class="btn tilted"></button>
-		<button class="btn big tilted"></button>
+	<body class="p-10">
+		<div class="btn-wrapper">
+			<h1 class="text-4xl mb-10">Transform Variable Trick</h1>
+			<button class="btn">Click</button>
+			<button class="btn big">Click</button>
+			<button class="btn tilted">Click</button>
+			<button class="btn big tilted">Click</button>
+		</div>
+		<div class="resize-wrap">
+			<h1 class="text-4xl my-10">Resizeable div</h1>
+			<div class="flex gap-5">
+				<!-- Card -->
+				<div class="card border-2" style="width: 350px">
+					<img
+						src="https://mdbootstrap.com/img/new/standard/city/031.jpg"
+						class="rounded-lg shadow-xl mb-4"
+						alt=""
+					/>
+
+					<div class="text-center">
+						<h5 class="text-xl font-semibold mb-2">Card title</h5>
+
+						<p class="mb-4">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sequi tenetur, voluptatibus
+							harum consequuntur alias quaerat excepturi temporibus nisi commodi, ex, ratione quae soluta!
+							Saepe alias dolores dolorem assumenda totam?
+						</p>
+
+						<button
+							class="
+								bg-purple-500
+								text-white
+								active:bg-purple-600
+								font-bold
+								uppercase
+								text-xs
+								px-4
+								py-2
+								rounded
+								shadow
+								hover:shadow-md
+								outline-none
+								focus:outline-none
+								mr-1
+								mb-1
+								ease-linear
+								transition-all
+								duration-150
+							"
+							type="button"
+						>
+							Button
+						</button>
+					</div>
+				</div>
+				<!-- Card -->
+				<!-- Card -->
+				<div class="card border-2" style="width: 350px">
+					<img
+						src="https://mdbootstrap.com/img/new/standard/city/031.jpg"
+						class="rounded-lg shadow-xl mb-4"
+						alt=""
+					/>
+
+					<div class="text-center">
+						<h5 class="text-xl font-semibold mb-2">Card title</h5>
+
+						<p class="mb-4">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sequi tenetur, voluptatibus
+							harum consequuntur alias quaerat excepturi temporibus nisi commodi, ex, ratione quae soluta!
+							Saepe alias dolores dolorem assumenda totam?
+						</p>
+
+						<button
+							class="
+								bg-purple-500
+								text-white
+								active:bg-purple-600
+								font-bold
+								uppercase
+								text-xs
+								px-4
+								py-2
+								rounded
+								shadow
+								hover:shadow-md
+								outline-none
+								focus:outline-none
+								mr-1
+								mb-1
+								ease-linear
+								transition-all
+								duration-150
+							"
+							type="button"
+						>
+							Button
+						</button>
+					</div>
+				</div>
+				<!-- Card -->
+			</div>
+		</div>
+
+		<br />
+		<br />
 	</body>
 </html>
