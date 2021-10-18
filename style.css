@@ -145,3 +145,16 @@ ol ul li {
         hsl(0, 100%, 50%)
     );
 }
+
+.clamp .clamp-card {
+    width: 50px;
+    padding: 5rem;
+    /* min-width: 10px;
+    max-width: 100px; */
+
+    height: 200px;
+    background-color: #ddd;
+
+    /* border: 8px solid black; */
+    border: clamp(8px, 5vw, 12px) solid black;
+}
