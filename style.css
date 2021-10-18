@@ -1,0 +1,51 @@
+/* Pointer event  */
+/* .container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				flex-direction: column;
+			}
+			button {
+				animation: fade 1s ease forwards;
+				cursor: pointer;
+				width: 150px;
+				height: 60px;
+				background-color: lightgreen;
+				border: 2px solid #333;
+			}
+			p {
+				animation: fade 1s ease forwards;
+			}
+			@keyframes fade {
+				from {
+					opacity: 1;
+					pointer-events: all;
+				}
+				to {
+					opacity: 0;
+					pointer-events: none;
+				}
+			} */
+
+/* Block vs inline */
+
+/* 
+div {
+	width: 50%;
+	background-color: lightblue;
+} */
+
+/* In block element we can add height and margin */
+/* h1 {
+	margin: 10rem;
+	height: 10rem;
+} */
+/* In inline element we can't add height and width */
+/* In inline element we can add margin left and margin right and padding */
+/* a {
+	height: 10rem; not work
+	width: 10rem; not work
+	padding: 5rem;
+	margin: 5rem;
+} */
