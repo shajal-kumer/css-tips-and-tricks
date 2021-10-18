@@ -94,3 +94,14 @@ header {
     padding: 15px 18px;
     transform: translateX(110%)
 }
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {
+    color: red
+}
+/* we can use :is selector to avoid this complex selection */
+:is(ul, ol) :is(ul, ol) li {
+    color: green
+}
