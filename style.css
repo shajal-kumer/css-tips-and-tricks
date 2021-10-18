@@ -1,150 +1,26 @@
-/* Pointer event  */
-.pointer-event {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	flex-direction: column;
+.btn {
+	display: block;
+	background-color: rgb(41, 206, 170);
+	margin: 2rem 4rem;
+	width: 100px;
+	border: none;
+	border-radius: 0.25rem;
+	height: 25px;
 }
-.pointer-event button {
-	animation: fade 1s ease forwards;
-	cursor: pointer;
-	width: 150px;
-	height: 60px;
-	background-color: lightgreen;
-	border: 2px solid #333;
+.btn {
+	/* transform: scale(1.2) rotate(10deg); */
+	transform: scale(var(--scale, 1.2)) rotate(var(--rotate, 10deg));
 }
-.pointer-event p {
-	animation: fade 1s ease forwards;
+.big {
+	/* transform: scale(2); */
+	--scale: 2;
 }
-@keyframes fade {
-	from {
-		opacity: 1;
-		pointer-events: all;
-	}
-	to {
-		opacity: 0;
-		pointer-events: none;
-	}
+.tilted {
+	/* transform: scale(1.2) rotate(-10deg); */
+	--rotate: -10deg;
 }
-
-/* Block vs inline */
-
-div.block-inline {
-	width: 50%;
-	background-color: lightblue;
-}
-
-/* In block element we can add height and margin */
-.block-inline h1 {
-	margin: 5rem;
-	height: 5rem;
-}
-*/
-/* In inline element we can't add height and width */
-/* In inline element we can add margin left and margin right and padding */
-.block-inline a {
-	height: 5rem; /* now work */
-	width: 5rem; /* now work */
-	padding: 5rem;
-	margin: 5rem;
-}
-
-/* Margin auto to center */
-div.margin-auto {
-	width: 400px;
-	height: 300px;
-	line-height: 100vh;
-	text-align: center;
-	background: lightblue;
-	margin: 0 auto;
-}
-
-/*  p::selection and p::first-letter  */
-.selection-first-letter p::selection {
-	background: purple;
-	color: #fff;
-}
-.selection-first-letter p::first-letter {
-	font-size: 3rem;
-	font-weight: bold;
-}
-
-/* Smooth scroll */
-.scroll-container {
-	width: 100%;
-	height: 400px;
-	overflow-y: scroll;
-	scroll-behavior: smooth;
-}
-
-.scroll-page {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-.scroll-page-1 {
-	background: #f0de7a;
-}
-
-.scroll-page-2 {
-	background: #afe69a;
-}
-
-.scroll-page-3 {
-	background: #b8b7cd;
-}
-
-/* Invert the colors on the screen */
-.invert-color a {
-	font-size: 5rem;
-	color: rgb(223, 21, 98);
-}
-
-.invert-color * {
-	background: #000;
-	color: #fff;
-	filter: invert(1) hue-rotate(180deg);
-}
-
-/* Adapt text on risize */
-/* 1rem  = 16px */
-
-html {
-	/* font-size: 62.5%; */
-}
-.text-resize-rem h1 {
-	font-size: 2rem;
-}
-.text-resize-rem p {
-	font-size: 1.8rem;
-}
-
-@media (max-width: 700px) {
-	html {
-		font-size: 55%;
-	}
-}
-/* Double box-shadow */
-
-.double-shadow {
-	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 40px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Text Gradient */
-.text-gradient h1 {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(
-		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(9, 9, 121, 1) 0%,
-		rgba(144, 6, 168, 1) 49%,
-		rgba(0, 212, 255, 1) 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline-block;
-	font-size: 5rem;
+.big.tilted {
+	/* transform: scale(2) rotate(-10deg); */
+	--rotate: -10deg;
+	--scale: 2;
 }
