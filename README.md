@@ -40,7 +40,7 @@ https://shajal-kumer.github.io/css-tips-and-tricks/
 
 ## 🚀 About Me
 
-I'm a front-end developer
+I'm a front-end developer with backend knowledge
 
 ## 🛠 Skills
 
