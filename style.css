@@ -1,150 +1,182 @@
-/* Pointer event  */
-.pointer-event {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	flex-direction: column;
+
+.btn {
+	display: block;
+	background-color: rgb(41, 206, 170);
+	margin: 2rem 4rem;
+	width: 100px;
+	border: none;
+	border-radius: 0.25rem;
+	height: 25px;
 }
-.pointer-event button {
-	animation: fade 1s ease forwards;
-	cursor: pointer;
-	width: 150px;
-	height: 60px;
-	background-color: lightgreen;
-	border: 2px solid #333;
+.btn {
+	/* transform: scale(1.2) rotate(10deg); */
+	transform: scale(var(--scale, 1.2)) rotate(var(--rotate, 10deg));
 }
-.pointer-event p {
-	animation: fade 1s ease forwards;
+.big {
+	/* transform: scale(2); */
+	--scale: 2;
 }
-@keyframes fade {
-	from {
-		opacity: 1;
-		pointer-events: all;
-	}
-	to {
-		opacity: 0;
-		pointer-events: none;
-	}
+.tilted {
+	/* transform: scale(1.2) rotate(-10deg); */
+	--rotate: -10deg;
+}
+.big.tilted {
+	/* transform: scale(2) rotate(-10deg); */
+	--rotate: -10deg;
+	--scale: 2;
+}
+.card {
+	resize: horizontal;
+	overflow: hidden;
+
+	min-width: 250px;
+	width: 350px;
+	max-width: 450px;
 }
 
-/* Block vs inline */
-
-div.block-inline {
+.aspect {
 	width: 50%;
-	background-color: lightblue;
-}
-
-/* In block element we can add height and margin */
-.block-inline h1 {
-	margin: 5rem;
-	height: 5rem;
-}
-*/
-/* In inline element we can't add height and width */
-/* In inline element we can add margin left and margin right and padding */
-.block-inline a {
-	height: 5rem; /* now work */
-	width: 5rem; /* now work */
-	padding: 5rem;
-	margin: 5rem;
-}
-
-/* Margin auto to center */
-div.margin-auto {
-	width: 400px;
-	height: 300px;
-	line-height: 100vh;
+	height: auto;
+	color: #fff;
+	margin: 20px 0;
 	text-align: center;
-	background: lightblue;
-	margin: 0 auto;
+
+	line-height: 60px;
+	font-size: 25px;
 }
 
-/*  p::selection and p::first-letter  */
-.selection-first-letter p::selection {
-	background: purple;
-	color: #fff;
+.video {
+	background-color: rgb(83, 212, 163);
+	aspect-ratio: 16 / 9;
 }
-.selection-first-letter p::first-letter {
-	font-size: 3rem;
-	font-weight: bold;
+.one-by-one {
+	background-color: red;
+	aspect-ratio: 1 / 1;
 }
+.percentage {
+	height: 60px;
+	background-color: rgb(47, 201, 167);
 
-/* Smooth scroll */
-.scroll-container {
-	width: 100%;
-	height: 400px;
-	overflow-y: scroll;
+	--percentage: 20;
+	width: calc(var(--percentage) * 1%);
+	width: calc(var(--percentage) * 1px);
+	width: calc(var(--percentage) * 1rem);
+	width: calc(var(--percentage) * 1em);
+}
+:root {
+	--header-height: 60px;
 	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--header-height) + 20px);
 }
-
-.scroll-page {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-.scroll-page-1 {
-	background: #f0de7a;
-}
-
-.scroll-page-2 {
-	background: #afe69a;
-}
-
-.scroll-page-3 {
-	background: #b8b7cd;
-}
-
-/* Invert the colors on the screen */
-.invert-color a {
-	font-size: 5rem;
-	color: rgb(223, 21, 98);
-}
-
-.invert-color * {
-	background: #000;
+header {
+	background-color: rgb(158, 25, 25);
 	color: #fff;
-	filter: invert(1) hue-rotate(180deg);
+	height: var(--header-height);
+	text-align: center;
+	font-size: 25px;
+	line-height: var(--header-height);
+	position: sticky;
+	top: 0;
 }
 
-/* Adapt text on risize */
-/* 1rem  = 16px */
-
-html {
-	/* font-size: 62.5%; */
-}
-.text-resize-rem h1 {
-	font-size: 2rem;
-}
-.text-resize-rem p {
-	font-size: 1.8rem;
+[data-tooltip] {
+	position: relative;
 }
 
-@media (max-width: 700px) {
-	html {
-		font-size: 55%;
-	}
+[data-tooltip]:hover::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	right: 0px;
+    top: 0px;
+    width: 100%
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 18px;
+    transform: translateX(110%)
 }
-/* Double box-shadow */
 
-.double-shadow {
-	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 40px 40px rgba(0, 0, 0, 0.3);
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {
+    color: red
+}
+/* we can use :is selector to avoid this complex selection */
+:is(ul, ol) :is(ul, ol) li {
+    color: green
 }
 
-/* Text Gradient */
-.text-gradient h1 {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(
-		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(9, 9, 121, 1) 0%,
-		rgba(144, 6, 168, 1) 49%,
-		rgba(0, 212, 255, 1) 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline-block;
-	font-size: 5rem;
+.counter {
+    counter-reset: heading;
+}
+.counter h2:before {
+    content: "Part " counter(heading, upper-roman) ": ";
+    counter-increment: heading;
+}
+
+.counter ol {
+    counter-reset: outline;
+}
+
+.counter li::before {
+    content: counters(outline, ".") ". ";
+    counter-increment: outline;
+}
+
+.conic-gradient {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(red, green);
+    background: conic-gradient(
+        red .25turn,
+        blue .25turn .65turn,
+        green .65turn
+    );
+    background: conic-gradient(
+        hsl(360, 100%, 50%),
+        hsl(315, 100%, 50%),
+        hsl(270, 100%, 50%),
+        hsl(225, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(135, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(45, 100%, 50%),
+        hsl(0, 100%, 50%)
+    );
+}
+
+.clamp .clamp-card {
+    width: 50px;
+    padding: 5rem;
+    /* min-width: 10px;
+    max-width: 100px; */
+
+    height: 200px;
+    background-color: #ddd;
+
+    /* border: 8px solid black; */
+    border: clamp(8px, 5vw, 12px) solid black;
+}
+.subgrid {
+        background-color: rgb(0, 51, 128);
+        width: 100px;
+        height: 100px;
+    }
+
+@supports (grid-template-columns: subgrid) {
+    .subgrid {
+        background-color: green;
+    }
+}
+
+.writing-mode div {
+    background-color: rgb(16, 139, 155);
+    height: 100px;
+    width: 100px;
+    color: white;
+    writing-mode: vertical-rl;
+    /* padding-top: 20px; */
+    padding-block-start: 20px;
 }
