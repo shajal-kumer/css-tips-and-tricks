@@ -1,4 +1,4 @@
-# Project Title
+# CSS Tips & Tricks
 
 There are so many css tips and trics that we dont know. So i have tried to find out those trics and practiced.
 
